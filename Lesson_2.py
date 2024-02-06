@@ -184,3 +184,144 @@
 #   return 3+3
 #
 # print(myfunction())
+# a = ["apple", "banana", "cherry"]
+# b = ["Ford", "BMW", "Volvo"]
+# a.append(b)
+# print(a)
+# fruits = ['apple', 'banana', 'cherry']
+# fruits.append("orange")
+# # print(fruits)
+# fruits = ['apple', 'banana', 'cherry', 'orange']
+# fruits.clear()
+# print(fruits)
+# list_fruits = ['cherry', 'banana', 'apple', 'orange']
+# list_fruits.remove('apple')
+#
+# list_fruits.count('banana')
+# print(list_fruits)
+fruits = ['apple', 'banana', 'cherry']
+
+# fruits.pop(2)
+# print(fruits)
+# fruits.pop(0)
+# print(fruits)
+# fruits.insert(1,'apple')
+# print(fruits)
+#
+# # a,b, *left_1 = (1, 2, 3, 0)
+# # print(a)
+# # print(b)
+# # print(left_1)
+# value_list = ('apple', 'banana', 'cherry')
+# value_list.__reversed__()
+# print(value_list)
+# # value_list.sort(reverse=False, key=len)
+# # value_list_1 = sorted(value_list, reverse=True)
+# # print(value_list_1)
+
+#
+# number_1 = float
+#
+# if not number_1.isdigit or not action not in ('+', '-', '/', '*') or not number_2.isdigit():
+#         print('Undefined number! Try again.')
+#         continue
+#
+#
+#     # if action not in ('+', '-', '/', '*'):
+#     #     print('Unavailable operator! Try again.')
+#     #     continue
+#     #
+#     # if not number_2.isdigit():
+#     #     print('Undefined number! Try again.')
+# #     #     continue
+# value_list = [1, 3, 9]   #88 bytes
+# value_list = ["apple", "red", "true", "aapple"]
+#
+# value_list.append("Hello")
+#
+# print(value_list)
+#
+# some_value = value_list.pop()                  # зробило нову змінну з Hello
+#
+# print(some_value)                              # Hello
+# print(value_list)                              # ['apple', 'red', 'true', 'aapple']
+#
+# value_list.reverse()                            # перевернуло
+# print(value_list)                                # ['apple', 'red', 'true', 'aapple']
+# # value_list.sort(reverse=False, key=len)                    # ['apple', 'red', 'true', 'aapple']
+# # value_list_1 = sorted(value_list, reverse=True)            # ['aapple', 'true', 'red', 'apple']
+# # print(value_list_1)
+# #
+# value_list.insert(5, "oooo")
+# # print(value_list)
+# # print(len(value_list))
+# print(value_list)
+# #
+# #
+# # value_list = [1, 3, 9]   #88 bytes
+# # value_list.append(2)  #88 bytes
+
+# while  for
+value_int = 0
+is_true = True
+
+# while True:
+#     value_int += +1
+#     print(value_int)
+#     if value_int > 10:
+#         break
+# else:
+#     print("dddddd")
+
+# # while value_int < 10:
+# #     value_int += 1
+# #     print(value_int)
+# #
+# while is_true:
+#     value_int += 1
+#     print(value_int)
+#     if value_int > 10:
+# #         is_true = False
+# # else:
+# #     print("dddddd")
+# # #
+# # # print("end")
+#
+# # continue
+# # while is_true:
+# #     value_int += 1
+# #
+# #     if value_int == 5:
+# #         continue
+# #
+# #     print(value_int)
+# #     if value_int > 10:
+# #         is_true = False
+# # else:
+# #     print("dddddd")
+#
+# num = input("Data: ")
+# index = 0
+#
+# while index < len(num):
+#     print(num[index])
+#     index += 1
+#
+# # print("end")
+#
+#
+# # # for, for - else, range()
+#
+# # some_str = "hello"
+#
+# # [1,2,3,4]
+# # (1,2,3,4)
+# # "hello"
+# # index = 0
+# # for letter in some_str:
+# #     print(letter)
+
+
+# while index < len(some_str):
+#     print(some_str[index])
+#     index += 1
