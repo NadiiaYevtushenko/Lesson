@@ -106,7 +106,7 @@ def my_home_work_6 (dict1, dict2):                             # визначе�
 # Вхідні дані
 dict1 = {1: 1, 2: 2}
 dict2 = {11: 11, 2: 22}
-
+# Результат
 result = my_home_work_6(dict1, dict2)
 print("variant_1_both:", result[0])
 print("variant_2_unique_dict1:", result[1])
