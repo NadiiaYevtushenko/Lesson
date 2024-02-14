@@ -400,8 +400,86 @@ is_true = True
 # # print(some_method)
 # # result = ".".join(some_method)
 # # print(result)
-# print(value_float)
-# result = value_float.replace(".pnj",".jpeg",4)
-# print(result)
-import this
-print(dir(this))
+# # print(value_float)
+# # result = value_float.replace(".pnj",".jpeg",4)
+# # print(result)
+# import this
+# print(dir(this))
+
+
+
+
+# collections OrderedDict (popitem, move_to_end)
+#
+# from collections import defaultdict
+#
+# for i in range(5):
+#     defdict[i].append(i * 5)
+#
+# print(defdict)
+#
+# dict_one = {}
+#
+# for i in range(5):
+#     dict_one.setdefault(i, [])
+#     dict_one[i].append(i * 5)
+# print(dict_one)
+#
+
+
+# from collections import namedtuple
+# fields = ('color', 'engine')
+# car = namedtuple('Car', fields)
+# car1 = car('red', 2000)
+# car1._asdict()
+# # color1, engine1 = car1
+# # print(color1, engine1)
+# print(car1._asdict())
+
+
+
+# max(), min(), sum()
+
+from collections import OrderedDict, defaultdict
+
+# value_dict = {
+#     "name": "Nick",
+#     "age": 18,
+#     "country": "Ukraine",
+# }
+# print(value_dict)
+#
+# my_order_dict = OrderedDict(value_dict)   # [("name", "Nick"), ("age", 18), ("country", "Ukraine")]
+# print(my_order_dict.popitem())
+
+
+# this_dict = dict.fromkeys(('name', 'age', 'key_3'), [])
+#
+# print(this_dict)
+# this_dict["name"].append(2)
+#
+# print(this_dict)
+
+
+
+
+
+# from collections import namedtuple
+#
+# fields = ('color', 'engine')
+#
+# car = namedtuple('Car', fields)
+#
+# car_1 = car('red', 2000)
+#
+# # print(car_1)
+#
+# color_1, engine_1 = car_1
+#
+# # print(color_1, engine_1)
+#
+# # print(car_1.color)
+# # print(car_1.engine)
+# print(car_1._asdict())
+
+#
