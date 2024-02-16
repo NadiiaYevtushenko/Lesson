@@ -53,6 +53,6 @@
 # result = sum(some_list[::2]) * some_list[-1]
 # print(result)
 
-# Заняття 6
-some_list = [ i for i in range(5)]
-print(some_list)
+# # Заняття 6
+# some_list = [ i for i in range(5)]
+# print(some_list)

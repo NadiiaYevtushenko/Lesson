@@ -481,5 +481,33 @@ from collections import OrderedDict, defaultdict
 # # print(car_1.color)
 # # print(car_1.engine)
 # print(car_1._asdict())
-
 #
+# def inner():
+#     global pi
+#     pi += 10
+#     # pi = pi + "!!!"
+#     # print(pi)
+#
+#     return "Hello"
+#
+#
+# pi = 5
+#
+# inner()
+#
+# # for i in range(pi):
+# #     print(i)
+is_send_second_email = True
+
+def print_line(w, fill, is_email=True, *args):
+    for i in range(w):
+        print(fill, end=' ')
+    if is_email:
+        print('yes')
+
+print_line(6, "*", is_send_second_email, 65, 6258)
+
+# my_tuple = (1, 2, 3)
+# val_1, *tup = my_tuple
+# print(val_1)
+# print(tup)
