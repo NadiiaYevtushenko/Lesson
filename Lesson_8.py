@@ -36,7 +36,7 @@
 #
 #     return result
 # some_list = [9, 9, 9]
-# print(add_one(some_list))
+# print(add_one(some_list))                        # перевірка на прінті
 
 
 # ###############Завдання 8.2##############
@@ -58,8 +58,8 @@ def find_unique_value(some_list):
        if some_list.count(value) == 1:
            return value
 
-some_list = [5, 5, 5, 2, 2, 0.5]
-print(find_unique_value(some_list))
+some_list = [5, 5, 5, 2, 2, 0.5]               # вхідні дані
+print(find_unique_value(some_list))            # перевірка на прінті
 
 
 # Перевірка тестів
