@@ -199,7 +199,7 @@
 #
 # list_fruits.count('banana')
 # print(list_fruits)
-fruits = ['apple', 'banana', 'cherry']
+# fruits = ['apple', 'banana', 'cherry']
 
 # fruits.pop(2)
 # print(fruits)
@@ -262,8 +262,8 @@ fruits = ['apple', 'banana', 'cherry']
 # # value_list.append(2)  #88 bytes
 
 # while  for
-value_int = 0
-is_true = True
+# value_int = 0
+# is_true = True
 
 # while True:
 #     value_int += +1
@@ -493,21 +493,151 @@ from collections import OrderedDict, defaultdict
 #
 # pi = 5
 #
-# inner()
+# # inner()
+# #
+# # # for i in range(pi):
+# # #     print(i)
+# is_send_second_email = True
 #
-# # for i in range(pi):
-# #     print(i)
-is_send_second_email = True
+# def print_line(w, fill, is_email=True, *args):
+#     for i in range(w):
+#         print(fill, end=' ')
+#     if is_email:
+#         print('yes')
+#
+# print_line(6, "*", is_send_second_email, 65, 6258)
+#
+# # my_tuple = (1, 2, 3)
+# # val_1, *tup = my_tuple
+# # print(val_1)
+# # # print(tup)
+# import requests
+#
+# def make_request(url, **kwargs):
+#     response = requests.get(url, **kwargs)
+#     print(response.text)
+#
+# # Виклик функції make_request з аргументами, які будуть передані в requests.get
+# make_request("https://www.example.com", headers={"User-Agent": "Mozilla/5.0"})
 
-def print_line(w, fill, is_email=True, *args):
-    for i in range(w):
-        print(fill, end=' ')
-    if is_email:
-        print('yes')
+# def my_code(w, h, fill, *args):
+#     for i in range(w):
+#         for j in range(h):
+#             print(fill, end=' ')
+#     return None
+# # my_code(7,5,"*")
+#
+# my_args = 7, 5, "*"
+# my_code(*my_args)
+# print(my_args)
+# #
+# def my_add(number_1):
+#     return number_1 + 2
+# # #
+# # # my_math_adding = my_add(10, 20)
+# # # print(my_math_adding)
+# #
+# # def my_mul(number_1, number_2):
+# #     return number_1 * number_2
+# #
+# # func_list = [my_add, my_mul]
+# # print(func_list)
+# #
+# # for func in func_list:
+# #     print(func(1,2), end=',')
+# def my_mul(number_1, *args):
+#     return number_1 * 2
+# # print(my_mul(5))
+#
+# def map_func(num_list, func):
+#     for num in num_list:
+#         print(func(num), end=" ")
+# map_func([1,5,10], my_add)
 
-print_line(6, "*", is_send_second_email, 65, 6258)
 
-# my_tuple = (1, 2, 3)
-# val_1, *tup = my_tuple
-# print(val_1)
-# print(tup)
+# # функція пишиться на льоту в залежності від вибору клієнта пишеться
+# choice = 0
+# if choice == 1:
+#     def my_func(n):
+#         if n > 0:
+#             return 1
+#         else: return 0
+# # else:
+# #     def my_func(n):
+# #         if n < 0:
+# #             return 1
+# #         else:
+# #             return 0
+# # print(my_func(10))
+#
+# ############# __main__############
+#
+# def my_func():
+#     """"This func doing stuff with"""
+#     return 10
+# print(my_func.__name__)
+# print(my_func.__module__)
+#
+# if __name__ == "__main__":
+#     print("fruits")
+#
+# def my_add(numb_1: int, numb_2: int) -> int:
+#     return numb_1 + numb_2
+# print(my_add("2","5"))
+
+
+###########Рекурсія##############
+
+# функція яка викликає сама себе
+# def fibo(n):
+#     a = 0
+#     b = 1
+#     for i in range(2, n + 1):
+#         a, b = b, a + b
+#     return b
+# print(fibo(10))
+# def fibo(n):
+#     a = 0
+#     b = 1
+#     print(a,b)
+#     for i in range(2, n + 1):
+#         a, b = b, a + b           #  a стало б, б стало а, 0, 1 = 1  0+1
+#     return b
+
+# print(fibo(6))
+# def fibo(n):
+#     print(n)
+#     if n in (1, 2):
+#         return 1
+#     return fibo(n-1) + fibo(n-2)
+# print(fibo(3))
+# def my_filter(seq, predicate):
+#     result = []
+#     for element in seq:
+#         if predicate(element):
+#             result.append(element)
+#     return result
+# sequence = [8, 9, 8, - 4, 2]
+# res = my_filter(sequence, lambda x: x > 0)
+# print (res)
+
+# value_str = "1234"
+# int_nums = []
+# for i in value_str:
+#     int_nums.append(int(i))
+# int_nums = map(int, "1234")
+# print(int_nums)
+# print(list(int_nums))
+
+# def power(n):
+#     return n**2
+# numbers = [1,2,3,4,5]
+# power_numbers = map(power, numbers)
+# print(numbers)
+# print(list(power_numbers))
+
+def power (n):
+    return n*2
+numbers = [1,2,3,4,5,6,7,8,9]
+power_numbers = map(power, numbers)
+print(list(power_numbers))
