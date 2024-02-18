@@ -56,3 +56,54 @@
 # # Заняття 6
 # some_list = [ i for i in range(5)]
 # print(some_list)
+
+# def square_generator(n):
+#     for i in range(n):
+#         yield i ** 2
+#
+# # Створення генератора для перших 5 квадратів чисел
+# squares = square_generator(5)
+#
+# # Виведення квадратів чисел
+# for square in squares:
+#     print(square)
+#
+# def outer_function():
+#     x = 10
+#     def inner_function():
+#         nonlocal x
+#         x = 20
+#     print("Змінна x внутрішньої функції:", x)
+#
+#     inner_function()
+#     print("Змінна x зовнішньої функції:", x)
+#
+# outer_function()
+#
+# Nadia, [2/18/2024 6:45 PM]
+# def outer_function():
+#     x = 10
+#
+#     def inner_function():
+#         nonlocal x
+#         x = 20
+#         print("Змінна x внутрішньої функції:", x)
+#
+#     inner_function()
+#     print("Змінна x зовнішньої функції:", x)
+#
+# outer_function()
+
+
+def my_decorator(func):
+    def wrapper():
+        print("Перед викликом функції")
+        func()
+        print("Після виклику функції")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Привіт!")
+
+say_hello()
