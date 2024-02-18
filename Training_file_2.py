@@ -635,9 +635,9 @@ from collections import OrderedDict, defaultdict
 # power_numbers = map(power, numbers)
 # print(numbers)
 # print(list(power_numbers))
-
-def power (n):
-    return n*2
-numbers = [1,2,3,4,5,6,7,8,9]
-power_numbers = map(power, numbers)
-print(list(power_numbers))
+#
+# def power (n):
+#     return n*2
+# numbers = [1,2,3,4,5,6,7,8,9]
+# power_numbers = map(power, numbers)
+# print(list(power_numbers))
