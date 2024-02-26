@@ -641,3 +641,84 @@ from collections import OrderedDict, defaultdict
 # numbers = [1,2,3,4,5,6,7,8,9]
 # power_numbers = map(power, numbers)
 # print(list(power_numbers))
+
+# write
+# writelines
+
+# filename = "test.txt"
+
+# my_file = open(filename, "w")   # "r", "w", "a"
+
+# my_file.write("Hello World!\n")
+# my_file.write("Hello World!\n")
+# my_file.write("Hello World!\n")
+#
+# my_file.close()
+
+
+# val_list = ["Hello World!", "Apple", "Red", "green"]
+# my_file = open(filename, "w")
+# for i in val_list:
+#
+#     my_file.writelines(i + "\n")
+#
+# my_file.close()
+#
+# filename = "test.txt"
+#
+# with open(filename, "w") as my_file:
+#     my_file.write("Hello World!\n")
+#     my_file.write("Hello World!\n")
+#     my_file.write("Hello World!\n")
+
+filename = "test.txt"
+#
+# with open(filename, "w") as my_file:
+#     for i in val_list:
+#         my_file.writelines(i + "\n")
+#
+# filename = "test.txt"
+# filename = "C:/doc/desktop/test.txt"
+
+# my_file = open(filename, "r")
+# data = my_file.read()
+# print(data, type(data))
+# my_file.close()
+
+# with open(filename, "r") as my_file:
+#     data = my_file.read()
+#
+#
+# print(data, type(data))
+
+
+# with open(filename, "r") as my_file:
+#     data = my_file.readlines()
+#
+# print(data)
+
+def simple_num(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def prime_generator(end):
+    number = 1
+    while number <= end:
+        if simple_num(number):
+            yield number
+        number += 1
+
+
+from inspect import isgenerator
+
+gen = prime_generator(10)
+print(list(prime_generator(29)))
+assert isgenerator(gen) == True, 'Test0'
+assert list(prime_generator(10)) == [2, 3, 5, 7], 'Test1'
+assert list(prime_generator(15)) == [2, 3, 5, 7, 11, 13], 'Test2'
+assert list(prime_generator(29)) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29], 'Test3'
+print('Ok')
