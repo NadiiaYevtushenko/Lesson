@@ -33,7 +33,7 @@ class Rectangle:                                                     # клас 
             total_area = self.get_square() + other.get_square()
             return total_area
         else:
-            return NotImplemented
+            return NotImplemented                             # Не впроваджений
 
     def __mul__(self, n):
         """Метод множення прямокутника на число n (це має збільшити площу базового прямокутника в n разів)."""
