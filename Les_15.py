@@ -29,7 +29,7 @@ class Rectangle:                                                     # клас 
     def __add__(self, other):
         """Метод складання прямокутників (площа сумарного прямокутника повинна
         дорівнювати сумі площ прямокутників, які ви складаєте)."""
-        if isinstance(other, Rectangle):
+        if isinstance(other, Rectangle):                      # чи є даний об'єкт екземпляром певного класу або підкласу.
             total_area = self.get_square() + other.get_square()
             return total_area
         else:
