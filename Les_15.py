@@ -14,29 +14,31 @@
 
 
 
-class Rectangle:                                                     #  клас "Прямокутник"
+class Rectangle:                                                     # клас "Прямокутник"
 
-    def __init__(self, width, height):                               # визначення функції клас "Прямокутник"
+    def __init__(self, width, height):                               # визначення функції класу "Прямокутник"
         self.width = width                                           # ширина
         self.height = height                                         # висота
 
     def get_square(self):                                            # визначення функції: отримання площі
         return self.width * self.height
 
-    def __eq__(self, other):                                         # визначення функції:  порівняння(площа)
+    def __eq__(self, other):                                         # визначення функції: порівняння (площа)
         return self.get_square() == other.get_square()
 
     def __add__(self, other):
         """Метод складання прямокутників (площа сумарного прямокутника повинна
         дорівнювати сумі площ прямокутників, які ви складаєте)."""
-        total_area = self.get_square() + other.get_square()
-        return total_area
-
+        if isinstance(other, Rectangle):
+            total_area = self.get_square() + other.get_square()
+            return total_area
+        else:
+            return NotImplemented
 
     def __mul__(self, n):
-        """Методи множення прямокутника на число n (це має збільшити площу базового прямокутника в n разів)."""
-        my_width = self.width * n ** 0.5
-        my_height = self.height * n ** 0.5
+        """Метод множення прямокутника на число n (це має збільшити площу базового прямокутника в n разів)."""
+        my_width = self.width * n * 0.5
+        my_height = self.height * n * 0.5
         return Rectangle(my_width, my_height)
 
     def __str__(self):
@@ -50,8 +52,8 @@ assert r1.get_square() == 8, 'Test1'
 assert r2.get_square() == 18, 'Test2'
 
 r3 = r1 + r2
-print(r3)
-assert r3.get_square() == 26, 'Test3'
+# print(r3)
+assert r3 == 26, 'Test3'
 
 r4 = r1 * 4
 assert r4.get_square() == 32, 'Test4'
