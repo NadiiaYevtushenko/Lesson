@@ -29,10 +29,9 @@ class Rectangle:                                                     #  клас
     def __add__(self, other):
         """Метод складання прямокутників (площа сумарного прямокутника повинна
         дорівнювати сумі площ прямокутників, які ви складаєте)."""
-        total_area = self.get_square() + other.get_square()         # обчислення загальної площі
-        new_width = (total_area // self.height)                     # обчислення нової ширини
-        new_height = self.height                                    # висота залишається незмінною
-        return Rectangle(new_width, new_height)
+        total_area = self.get_square() + other.get_square()
+        return total_area
+
 
     def __mul__(self, n):
         """Методи множення прямокутника на число n (це має збільшити площу базового прямокутника в n разів)."""
@@ -47,23 +46,12 @@ class Rectangle:                                                     #  клас
 r1 = Rectangle(2, 4)
 r2 = Rectangle(3, 6)
 
-# # Перевірка
-# r = Rectangle(2, 4)            # Створюємо екземпляр класу Rectangle
-# n = 2  # Задаємо значення n
-#
-# # Викликаємо метод __mul__ з параметром n та виводимо результат
-# result_rectangle = r.__mul__(n)
-# print(result_rectangle)
-
-
 assert r1.get_square() == 8, 'Test1'
 assert r2.get_square() == 18, 'Test2'
 
 r3 = r1 + r2
-assert r3.get_square() == 24, 'Test3'
-
-# r3 = r1 + r2  # Обчислення суми прямокутників
-# print(r3.get_square())  # Вивід площі прямокутника r3
+print(r3)
+assert r3.get_square() == 26, 'Test3'
 
 r4 = r1 * 4
 assert r4.get_square() == 32, 'Test4'
