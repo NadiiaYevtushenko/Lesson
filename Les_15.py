@@ -41,6 +41,7 @@ class Rectangle:                                                     # клас 
         my_height = self.height * n * 0.5
         return Rectangle(my_width, my_height)
 
+
     def __str__(self):
         return f"Rectangle (width={self.width}, height={self.height})"
 
@@ -56,5 +57,8 @@ r3 = r1 + r2
 assert r3 == 26, 'Test3'
 
 r4 = r1 * 4
+r5 = r2 * 4
+print (r1, r2)
+print (r4, r5 )
 assert r4.get_square() == 32, 'Test4'
 print("All tests passed")
