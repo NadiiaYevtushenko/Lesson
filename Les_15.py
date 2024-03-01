@@ -53,8 +53,8 @@ assert r1.get_square() == 8, 'Test1'
 assert r2.get_square() == 18, 'Test2'
 
 r3 = r1 + r2
-# print(r3)
-assert r3 == 26, 'Test3'
+print(r3)
+assert r3.get_square() == 26, 'Test3'
 
 r4 = r1 * 4
 r5 = r2 * 4
