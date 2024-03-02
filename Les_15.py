@@ -11,7 +11,7 @@
 # вбудований метод __mul__
 # 3. Коли в результаті мат. дій створюєте новий екземпляр класу Прямокутник, то у цього екземпляру, перемноження
 # сторін, має давати необхідну площу. Це теж важливо
-
+import math
 
 
 class Rectangle:                                                     # клас "Прямокутник"
@@ -21,24 +21,27 @@ class Rectangle:                                                     # клас 
         self.height = height                                         # висота
 
     def get_square(self):                                            # визначення функції: отримання площі
-        return self.width * self.height
+        return math.ceil(self.width * self.height)
 
     def __eq__(self, other):                                         # визначення функції: порівняння (площа)
-        return self.get_square() == other.get_square()
+        if isinstance(other, Rectangle):
+            return self.get_square() == other.get_square()
+        return NotImplemented
 
     def __add__(self, other):
         """Метод складання прямокутників (площа сумарного прямокутника повинна
         дорівнювати сумі площ прямокутників, які ви складаєте)."""
         if isinstance(other, Rectangle):                      # чи є даний об'єкт екземпляром певного класу або підкласу.
-            total_area = self.get_square() + other.get_square()
-            return total_area
-        else:
-            return NotImplemented                             # Не впроваджений
+            square = self.get_square() + other.get_square()
+            x = square ** 0.5
+            return Rectangle(x, x)
+            return NotImplemented
+
 
     def __mul__(self, n):
         """Метод множення прямокутника на число n (це має збільшити площу базового прямокутника в n разів)."""
-        my_width = self.width * n * 0.5
-        my_height = self.height * n * 0.5
+        my_width = self.width * (n ** 0.5)
+        my_height = self.height * (n ** 0.5)
         return Rectangle(my_width, my_height)
 
 
@@ -48,17 +51,16 @@ class Rectangle:                                                     # клас 
 
 r1 = Rectangle(2, 4)
 r2 = Rectangle(3, 6)
-
 assert r1.get_square() == 8, 'Test1'
+print(r1)
 assert r2.get_square() == 18, 'Test2'
+print(r2)
 
 r3 = r1 + r2
-print(r3)
 assert r3.get_square() == 26, 'Test3'
+print(r3)
 
 r4 = r1 * 4
-r5 = r2 * 4
-print (r1, r2)
-print (r4, r5 )
 assert r4.get_square() == 32, 'Test4'
+print(r4)
 print("All tests passed")
