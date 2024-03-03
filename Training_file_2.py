@@ -768,20 +768,30 @@ class Door:
     def __init__(self):
         print("Door is open")
 
+    def open_door(self):
+        print("Door opened")
+
+
 class Alarm:
     def activate(self):
         print("Alarm activated")
+
+
 class SecuritiSystem:
     def __init__(self, door, alarm):
-        self.door = door()
-        self.alarm = alarm()
+        self.door = door
+        self.alarm = alarm
+
     def arm(self):
-        self.door.open()
+        self.door.open_door()
         self.alarm.activate()
         print("Security system armed")
 
+
+# Create instances of Door and Alarm
 my_door = Door()
 my_alarm = Alarm()
 
+# Pass instances to SecuritySystem
 my_security_system = SecuritiSystem(my_door, my_alarm)
 my_security_system.arm()
